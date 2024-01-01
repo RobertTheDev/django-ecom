@@ -9,13 +9,19 @@
   </head>
   <body>
     {% include "layouts/header.html" %}
-    <h1>Products</h1>
-    <ul>
+    <ul class="cards-container">
       {% for product in products_data%}
-      <li>
-        <a href="/products/{{product.id}}">
-          <img src="{{product.thumbnail}}" />
+      <li class="card-container">
+        <a class="card-container" href="/products/{{product.id}}">
+          <div class="card-image-container">
+            <img class="card-image" src="{{product.thumbnail}}" />
+          </div>
+
           <p>{{ product.title }}</p>
+          <div>
+            <button>Save</button>
+            <button>Add to basket</button>
+          </div>
         </a>
       </li>
       {% endfor %}
