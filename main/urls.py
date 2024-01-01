@@ -2,7 +2,7 @@ from django.urls import path
 
 from . import views
 
-handler404 = 'products.views.custom_404'
+handler404 = 'main.views.custom_404'
 
 
 

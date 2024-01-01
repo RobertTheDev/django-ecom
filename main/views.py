@@ -10,7 +10,7 @@ def custom_404(request, exception):
 # Create your views here.
 def index(request):
     template = loader.get_template('products/index.html')
-    json_file_path = 'products/data.json'
+    json_file_path = 'main/data.json'
     with open(json_file_path, 'r') as json_file:
         data = json.load(json_file)
 
@@ -19,7 +19,7 @@ def index(request):
 
 def product(request, product_id):
     template = loader.get_template('products/product.html')
-    json_file_path = 'products/data.json'
+    json_file_path = 'main/data.json'
     with open(json_file_path, 'r') as json_file:
         data = json.load(json_file)
 
