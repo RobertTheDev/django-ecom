@@ -11,7 +11,10 @@
     <ul>
       {% for product in products_data%}
       <li>
-        <a href="/products/{{product.id}}"> {{ product.name }}</a>
+        <a href="/products/{{product.id}}">
+          <img src="{{product.thumbnail}}" />
+          <p>{{ product.title }}</p>
+        </a>
       </li>
       {% endfor %}
     </ul>

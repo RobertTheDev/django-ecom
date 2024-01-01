@@ -7,6 +7,13 @@
   </head>
   <body>
     {% include "layouts/header.html" %}
-    <h1>Product {{ product_data.name }}</h1>
+    <h1>Product {{ product_data.title }}</h1>
+    <ul>
+      {% for image in product_data.images%}
+      <li>
+        <img src="{{image}}" />
+      </li>
+      {% endfor %}
+    </ul>
   </body>
 </html>

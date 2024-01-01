@@ -24,7 +24,7 @@ def product(request, product_id):
         data = json.load(json_file)
 
     # Find the product with the specified product_id (converted to string)
-    product_data = next((product for product in data if product['id'] == str(product_id)), None)
+    product_data = next((product for product in data if product['id'] == int(product_id)), None)
 
     # Check if the product_id exists in the data
     if product_data:
