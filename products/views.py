@@ -1,7 +1,11 @@
-from django.shortcuts import render
+from django.http import HttpResponse, HttpResponseNotFound
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.template import loader
 import json
+
+def custom_404(request, exception):
+    return render(request, '/404.html', status=404)
 
 # Create your views here.
 def index(request):
@@ -25,7 +29,6 @@ def product(request, product_id):
     # Check if the product_id exists in the data
     if product_data:
         context = {'product_data': product_data}
+        return HttpResponse(template.render(context, request))
     else:
-        context = {'product_data': None}
-
-    return HttpResponse(template.render(context, request))
+        return HttpResponseNotFound(render(request, '404.html', status=404))
