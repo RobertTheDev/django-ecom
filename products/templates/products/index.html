@@ -5,6 +5,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+    />
     <title>Products</title>
   </head>
   <body>
@@ -19,8 +34,10 @@
 
           <p>{{ product.title }}</p>
           <div>
-            <button>Save</button>
-            <button>Add to basket</button>
+            <button><i class="fa-regular fa-heart"></i>Save</button>
+            <button>
+              <i class="fa-solid fa-basket-shopping"></i>Add to basket
+            </button>
           </div>
         </a>
       </li>
