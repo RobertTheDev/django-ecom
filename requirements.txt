@@ -4,6 +4,7 @@ Django==5.0
 django-appconf==1.0.6
 django-compressor==4.4
 django-libsass==0.9
+django-livereload-server==0.5.1
 django-sass-processor==1.4
 filelock==3.13.1
 fontawesomefree==6.5.1
@@ -13,8 +14,10 @@ pbr==6.0.0
 platformdirs==4.1.0
 rcssmin==1.1.1
 rjsmin==1.2.1
+six==1.16.0
 sqlparse==0.4.4
 stevedore==5.1.0
+tornado==6.4
 virtualenv==20.25.0
 virtualenv-clone==0.5.7
 virtualenvwrapper==6.0.0
