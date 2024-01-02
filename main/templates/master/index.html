@@ -28,7 +28,7 @@
     />
     <title>{% block title %}{% endblock %}</title>
   </head>
-  <body>
+  <body class="page-layout">
     <header class="header-container">
       <div>
         <a href="/">Home</a>
@@ -54,7 +54,9 @@
       </a>
       </div>
     </header>
+    <main class="page-container"> 
     {% block content %} {% endblock %}
+  </main>
     <footer class="footer-container">
       <p>©{% now "Y" %} company</p>
       <div>
