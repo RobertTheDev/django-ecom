@@ -1,5 +1,5 @@
- @import "./footer.scss";
- @import "./header.scss";
+ @import "./styles/footer";
+ @import "./styles/header";
  
  
 
@@ -26,6 +26,10 @@
      text-decoration: none;
  }
 
+ button:hover{
+    cursor: pointer;
+ }
+
  .cards-container {
      display: grid;
      grid-template-columns: repeat(4, 1fr);
@@ -35,7 +39,7 @@
  }
 
  .card-container {
-     width: 100%;
+     width: 100%;  
  }
 
  .card-image-container {

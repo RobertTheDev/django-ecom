@@ -1,4 +1,5 @@
-{% load static %} {% load compress %}
+{% load static %}
+ {% load compress %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -31,9 +32,9 @@
   <body class="page-layout">
     <header class="header-container">
       <div class="header-left">
-        <a href="/">gifty
+        <a class="header-logo-text" href="/">Gifty
         </a>
-        <button><i class="fa-solid fa-bars"></i></button>
+     
       </div>
       <div class="header-center">
         <div  class="header-search-container">
@@ -46,15 +47,19 @@
         </div>
       </div>
       <div class="header-right">
+        <a href="/login"> 
+          <button class="header-control"> </i> Sign In</button>
+        </a>
         <a href="/wishlist"> 
-        <button><i class="fa-regular fa-heart"></i></button>
+
+        <button class="header-control"> 
+          <i class="fa-regular fa-heart header-control-icon"></i>
+        </button>
         </a>
         <a href="/basket"> 
-        <button><i class="fa-solid fa-basket-shopping"></i></button>
+        <button class="header-control"><i class="fa-regular fa-basket-shopping header-control-icon"></i></button>
       </a>
-       <a href="/login"> 
-        <button><i class="fa-regular fa-user"></i> Sign In</button>
-      </a>
+     
       </div>
     </header>
     <main class="page-container"> 
