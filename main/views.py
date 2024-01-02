@@ -66,7 +66,13 @@ def termsAndConditions(request):
     return render(request, 'info/terms-and-conditions.html')
 
 def login(request):
-    return render(request, 'login/index.html')
+    return render(request, 'auth/login.html')
+
+def signUp(request):
+    return render(request, 'auth/sign-up.html')
+
+def forgotPassword(request):
+    return render(request, 'auth/forgot-password.html')
 
 def orders(request):
     return render(request, 'orders/index.html')
