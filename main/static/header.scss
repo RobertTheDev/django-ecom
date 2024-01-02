@@ -1,0 +1,67 @@
+.header{
+    &-container{
+        padding: 16px 48px;
+        border-bottom: 1px solid lightgray;
+        display: flex;
+        align-items: center;
+        height: 70px;
+        position: sticky;
+        background: white;
+        top: 0;
+        width: 100%;
+    }
+    &-center{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex: 2;
+   
+    }
+    &-left{
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        flex: 1;
+    }
+    &-right{
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+    }
+
+    &-search{
+        &-button{
+            align-items: center;
+            display: flex;
+            background: black;
+            color: white;
+            border: none;
+            height: 100%;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-container{
+            display: flex;
+            align-items: center;
+           border: 1px solid black;
+            width: 75%;
+            overflow: hidden;
+            border-radius: 20px;
+            height: 40px;
+
+             
+        }
+        &-input{
+            height: 100%;
+          flex: 1;
+          padding: 0 16px;
+          border: none;
+          outline: none;
+        }
+    }
+}
+
+ 

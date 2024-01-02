@@ -1,0 +1,31 @@
+.footer{
+    &-container {
+        align-items: center;
+        background-color: #222222;
+        color: #ffffff;
+        display: flex;
+        font-size: 16px;
+        justify-content: space-between;
+        padding: 16px 48px;
+    }
+    &-links{
+        &-container{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 32px;
+            flex: 1;
+            text-decoration: underline;
+        }
+
+    }
+    &-copyright{
+        &-container{
+            display: flex;
+            align-items: center;
+            flex: 1;
+            justify-content: flex-start;
+        }
+
+    }
+}

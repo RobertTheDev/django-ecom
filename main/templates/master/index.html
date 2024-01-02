@@ -30,20 +30,22 @@
   </head>
   <body class="page-layout">
     <header class="header-container">
-      <div>
+      <div class="header-left">
         <a href="/">gifty
         </a>
         <button><i class="fa-solid fa-bars"></i></button>
       </div>
-      <div>
-        <div>
-          <input placeholder="Search products..." />
-          <a href="/search"> 
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
-          </a>
+      <div class="header-center">
+        <div  class="header-search-container">
+          <input placeholder="Search products..." class="header-search-input" />
+          <!-- <a href="/search">  -->
+          <button
+          class="header-search-button"
+          ><i class="fa-solid fa-magnifying-glass"></i></button>
+          <!-- </a> -->
         </div>
       </div>
-      <div>
+      <div class="header-right">
         <a href="/wishlist"> 
         <button><i class="fa-regular fa-heart"></i></button>
         </a>
@@ -59,8 +61,10 @@
     {% block content %} {% endblock %}
   </main>
     <footer class="footer-container">
-      <p>©{% now "Y" %} company</p>
-      <div>
+      <div class="footer-copyright-container">
+      <p>© {% now "Y" %} Gifty</p>
+      </div>
+      <div class="footer-links-container">
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
         <a href="/privacy-policy">Privacy Policy</a>

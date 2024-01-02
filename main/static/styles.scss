@@ -1,14 +1,7 @@
- .header-container {
-     border-bottom: 1px solid lightgray;
-     display: flex;
-     align-items: center;
-     height: 70px;
-     position: sticky;
-     background: whitesmoke;
-     padding: 0 32px;
-     top: 0;
-     width: 100%;
- }
+ @import "./footer.scss";
+ @import "./header.scss";
+ 
+ 
 
  * {
      box-sizing: border-box;
@@ -55,9 +48,7 @@
      width: 100%;
  }
 
- .footer-container {
-     padding: 0 32px;
- }
+ 
 
  
  .page-layout{
