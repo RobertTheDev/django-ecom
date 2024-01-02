@@ -32,16 +32,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "main",
+    "compressor",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'livereload',
-    'django.contrib.staticfiles',
     'fontawesomefree',
-    "compressor",
-    "main"
+    'django.contrib.staticfiles',
 ]
 
 MIDDLEWARE = [
@@ -123,9 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")
-]
+ 
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -134,15 +132,26 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'django_libsass.SassCompiler'),
-)
+ 
+
+ 
 
 
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    # other finders..
     'compressor.finders.CompressorFinder',
 )
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+ 
+# COMPRESS_ENABLED = True
+
+# Set COMPRESS_ROOT to an absolute path on your server
+# COMPRESS_ROOT = os.path.join(BASE_DIR, 'static_compressed/')
+
+# Set COMPRESS_OUTPUT_DIR to the relative path within COMPRESS_ROOT
+# COMPRESS_OUTPUT_DIR = 'compressed'
