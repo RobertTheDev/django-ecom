@@ -8,6 +8,7 @@ django-sass-processor==1.4
 filelock==3.13.1
 fontawesomefree==6.5.1
 libsass==0.22.0
+Markdown==3.5.1
 pbr==6.0.0
 platformdirs==4.1.0
 rcssmin==1.1.1

@@ -1,8 +1,11 @@
 from django.http import HttpResponse, HttpResponseNotFound
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.template import loader
+from .models import MarkdownContent
 import json
+ 
+
 
 def custom_404(request, exception):
     return render(request, '/404.html', status=404)
@@ -92,5 +95,11 @@ def settings(request):
 def wishlist(request):
     return render(request, 'wishlist/index.html')
 
- 
- 
+def markdown_content_view(request, slug):
+    markdown_content = get_object_or_404(MarkdownContent, slug=slug)
+    context = {"markdown_content": markdown_content}
+    return render(
+        request,
+        "markdown_content/index.html",
+        context=context
+    )

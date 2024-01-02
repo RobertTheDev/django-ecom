@@ -1,4 +1,5 @@
 from django.urls import path
+from main.views import markdown_content_view
 
 from . import views
 
@@ -40,6 +41,9 @@ urlpatterns = [
     path("search", views.search, name="search"),
     path("settings", views.settings, name="settings"),
     path("wishlist", views.wishlist, name="wishlist"),
+    path(
+        "<slug:slug>", markdown_content_view, name="markdown-content"
+    ),
 ]
 
  

@@ -1,0 +1,9 @@
+{% extends "master/index.html" %} 
+{% load main_extras %}
+{% block title %} Wishlist {% endblock %} 
+{% block content %}
+<h1>{{ markdown_content.title }}</h1>
+<p>{{ markdown_content.content|render_markdown }}</p>
+{% endblock %}
+
+ 
