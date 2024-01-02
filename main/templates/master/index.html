@@ -1,0 +1,54 @@
+{% load static %} {% load compress %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% compress css %}
+    <link
+      rel="stylesheet"
+      type="text/x-scss"
+      href="{% static 'styles.scss' %}"
+    />
+    {% endcompress %}
+
+    <link
+      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/brands.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'fontawesomefree/css/solid.css' %}"
+      rel="stylesheet"
+    />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header class="header-container">
+      <div>
+        <a href="/">Home</a>
+        <button><i class="fa-solid fa-bars"></i></button>
+      </div>
+      <div>
+        <div>
+          <input placeholder="Search products..." />
+          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+      <div>
+        <button><i class="fa-regular fa-heart"></i></button>
+        <button><i class="fa-solid fa-basket-shopping"></i></button>
+        <button><i class="fa-regular fa-user"></i> Sign In</button>
+      </div>
+    </header>
+    {% block content %} {% endblock %}
+    <footer class="footer-container">
+      <p>©{% now "Y" %} company</p>
+    </footer>
+  </body>
+</html>
