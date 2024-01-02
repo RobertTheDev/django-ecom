@@ -6,6 +6,7 @@ import json
 
 def custom_404(request, exception):
     return render(request, '/404.html', status=404)
+    
 
 # Create your views here.
 def index(request):
@@ -81,3 +82,6 @@ def settings(request):
 
 def wishlist(request):
     return render(request, 'wishlist/index.html')
+
+ 
+ 

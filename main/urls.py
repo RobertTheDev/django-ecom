@@ -2,6 +2,19 @@ from django.urls import path
 
 from . import views
 
+handler404 = 'products.views.custom_404'
+
+
+
+urlpatterns = [
+    path("", views.index, name="index"),
+    path("<int:product_id>/", views.product, name="product"),
+]
+
+from django.urls import path
+
+from . import views
+
 handler404 = 'main.views.custom_404'
 
 
@@ -20,9 +33,11 @@ urlpatterns = [
     path("info/terms-and-conditions", views.termsAndConditions, name="terms-and-conditions"),
     path("login", views.login, name="login"),
     path("orders", views.orders, name="orders"),
-    path("products", views.products, name="products"),
-    path("products/<int:product_id>", views.product, name="product"),
+    path("products/", views.products, name="products"),
+    path("products/<int:product_id>/", views.product, name="product"),
     path("search", views.search, name="search"),
     path("settings", views.settings, name="settings"),
     path("wishlist", views.wishlist, name="wishlist"),
 ]
+
+ 

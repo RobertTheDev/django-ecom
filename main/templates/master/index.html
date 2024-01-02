@@ -37,18 +37,33 @@
       <div>
         <div>
           <input placeholder="Search products..." />
+          <a href="/search"> 
           <button><i class="fa-solid fa-magnifying-glass"></i></button>
+          </a>
         </div>
       </div>
       <div>
+        <a href="/wishlist"> 
         <button><i class="fa-regular fa-heart"></i></button>
+        </a>
+        <a href="/basket"> 
         <button><i class="fa-solid fa-basket-shopping"></i></button>
+      </a>
+       <a href="/login"> 
         <button><i class="fa-regular fa-user"></i> Sign In</button>
+      </a>
       </div>
     </header>
     {% block content %} {% endblock %}
     <footer class="footer-container">
       <p>©{% now "Y" %} company</p>
+      <div>
+        <a href="/info/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/info/privacy-policy">Privacy Policy</a>
+        <a href="/info/returns-policy">Returns Policy</a>
+        <a href="/info/terms-and-conditions">Terms and Conditions</a>
+      </div>
     </footer>
   </body>
 </html>
