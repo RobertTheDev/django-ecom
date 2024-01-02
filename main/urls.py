@@ -32,6 +32,7 @@ urlpatterns = [
     path("info/terms-and-conditions", views.termsAndConditions, name="terms-and-conditions"),
     path("login", views.login, name="login"),
     path("forgot-password", views.forgotPassword, name="forgot-password"),
+    path("reset-password", views.resetPassword, name="reset-password"),
     path("sign-up", views.signUp, name="sign-up"),
     path("orders", views.orders, name="orders"),
     path("products/", views.products, name="products"),

@@ -74,6 +74,9 @@ def signUp(request):
 def forgotPassword(request):
     return render(request, 'auth/forgot-password.html')
 
+def resetPassword(request):
+    return render(request, 'auth/reset-password.html')
+
 def orders(request):
     return render(request, 'orders/index.html')
 
