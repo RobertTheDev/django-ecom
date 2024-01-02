@@ -1,55 +1,23 @@
-{% load static %} {% load compress %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% extends "master/index.html" %} 
+{% block title %} Products {% endblock %} 
+{% block content %}
+<ul class="cards-container">
+  {% for product in products_data%}
+  <li class="card-container">
+    <a class="card-container" href="/products/{{product.id}}">
+      <div class="card-image-container">
+        <img class="card-image" src="{{product.thumbnail}}" />
+      </div>
 
-    {% compress css %}
-    <link
-      rel="stylesheet"
-      type="text/x-scss"
-      href="{% static 'styles.scss' %}"
-    />
-    {% endcompress %}
-
-    <link
-      href="{% static 'fontawesomefree/css/fontawesome.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="{% static 'fontawesomefree/css/brands.css' %}"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="{% static 'fontawesomefree/css/solid.css' %}"
-      rel="stylesheet"
-    />
-    <title>Products</title>
-  </head>
-  <body>
-    {% include "layouts/header.html" %}
-    <ul class="cards-container">
-      {% for product in products_data%}
-      <li class="card-container">
-        <a class="card-container" href="/products/{{product.id}}">
-          <div class="card-image-container">
-            <img class="card-image" src="{{product.thumbnail}}" />
-          </div>
-
-          <p>{{ product.title }}</p>
-          <div>
-            <button><i class="fa-regular fa-heart"></i>Save</button>
-            <button>
-              <i class="fa-solid fa-basket-shopping"></i>Add to basket
-            </button>
-          </div>
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-    {% include "layouts/footer.html" %}
-  </body>
-</html>
+      <p>{{ product.title }}</p>
+      <div>
+        <button><i class="fa-regular fa-heart"></i>Save</button>
+        <button>
+          <i class="fa-solid fa-basket-shopping"></i>Add to basket
+        </button>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

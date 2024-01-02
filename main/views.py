@@ -32,3 +32,52 @@ def product(request, product_id):
         return HttpResponse(template.render(context, request))
     else:
         return HttpResponseNotFound(render(request, '404.html', status=404))
+
+
+def account(request):
+    return render(request, 'account/index.html')
+
+def basket(request):
+    return render(request, 'basket/index.html')
+
+def category(request):
+    return render(request, 'category/index.html')
+
+def checkout(request):
+    return render(request, 'checkout/index.html')
+
+def contact(request):
+    return render(request, 'contact/index.html')
+
+def home(request):
+    return render(request, 'home/index.html')
+
+def about(request):
+    return render(request, 'info/about.html')
+
+def privacyPolicy(request):
+    return render(request, 'info/privacy-policy.html')
+
+def returnsPolicy(request):
+    return render(request, 'info/returns-policy.html')
+
+def termsAndConditions(request):
+    return render(request, 'info/terms-and-conditions.html')
+
+def login(request):
+    return render(request, 'login/index.html')
+
+def orders(request):
+    return render(request, 'orders/index.html')
+
+def products(request):
+    return render(request, 'products/index.html')
+
+def search(request):
+    return render(request, 'search/index.html')
+
+def settings(request):
+    return render(request, 'settings/index.html')
+
+def wishlist(request):
+    return render(request, 'wishlist/index.html')
