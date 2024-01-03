@@ -1,21 +1,21 @@
 {% extends "master/index.html" %} 
 {% block title %} Contact {% endblock %} 
 {% block content %}
+<div class="form-wrapper"> 
 <h1>Contact</h1>
 <form class="form-container">
-    <div class="form-row">
-        <label for="firstName">First Name:</label>
-        <input class="form-input" type="text" id="firstName" name="firstName" required>
-
-        <label for="lastName">Last Name:</label>
-        <input class="form-input" type="text" id="lastName" name="lastName" required>
-    </div>
+  
+        <label for="name">Name:</label>
+        <input class="form-input" type="text" id="name" name="name" required>
+ 
+  
     <label for="email">Email:</label>
     <input class="form-input" type="email" id="email" name="email" required>
  
     <label for="message">Message:</label>
-    <textarea id="message" name="message" required></textarea>
+    <textarea class="form-input"  id="message" name="message" required></textarea>
 
     <button class="form-button" type="submit">Send Message</button>
 </form>
+</div>
 {% endblock %}

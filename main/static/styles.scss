@@ -1,6 +1,7 @@
  @import "./styles/footer";
  @import "./styles/form";
  @import "./styles/header";
+ @import "./styles/product-page";
  
  
 
@@ -20,6 +21,8 @@
 
  img {
      object-fit: cover;
+     height: 40px;
+     width: 40px;
  }
 
  a {

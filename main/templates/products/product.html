@@ -2,13 +2,34 @@
 {% block title %} 
 {{ product_data.title}} 
 {% endblock %} 
-{% block content %}
-<h1>Product {{ product_data.title }}</h1>
-<ul>
+{% block content %} 
+<div class="product-page-container"> 
+ <div class="product-page-left"> 
+<div class="product-page-main-image-container"> 
+<img class="product-page-main-image" src="{{product_data.images.0 }}" />
+</div>
+ 
+<ul class="product-page-thumbnails-container">
   {% for image in product_data.images%}
-  <li>
-    <img src="{{image}}" />
-  </li>
+  <li class="product-page-thumbnail-container">
+    <img class="product-page-thumbnail-image" src="{{image}}" />
+  </li> 
   {% endfor %}
 </ul>
+</div>
+<div class="product-page-right">
+  <p>{{product_data.title}}</p>
+  <p>£{{product_data.price}}</p>
+  <p>Details</p>
+
+  <p>Make someone feel extra special and bring them even more joy with this little added treat!</p>
+  <p>Select Quantity</p>
+  <select>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+  </select>
+  <button>Add to Basket</button>
+</div>
+</div>
 {% endblock %}
